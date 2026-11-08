@@ -1,0 +1,8 @@
+{
+  "name": "rctech-website",
+  "private": true,
+  "description": "Robo City Technologies website (static HTML, no build step)",
+  "engines": {
+    "node": "26.x"
+  }
+}
