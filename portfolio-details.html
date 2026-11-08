@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Append Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Our Work | Robo City Technologies</title>
+
+
+  <meta content="Products built by Robo City Technologies in Lusaka: Purple Hub, the Purple AI companion, an autonomous home robot, Purple Chat and Mercato." name="description">
+  <meta content="Robo City Technologies, RC Tech, Purple Hub, robotics Zambia, smart home Zambia, embedded systems training, Lusaka" name="keywords">
+  <meta property="og:title" content="Robo City Technologies">
+  <meta property="og:description" content="Innovate. Automate. Elevate. Robotics, AI and smart home technology from Lusaka, Zambia.">
+  <meta property="og:image" content="https://rctech.vercel.app/assets/img/rctech-logo-purple.png">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -34,6 +39,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script>
+    // Dark mode: remember the visitor's choice, otherwise follow their phone or computer setting
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('rct-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 
 <body class="portfolio-details-page">
@@ -42,9 +56,8 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Append</h1><span>.</span>
+        <img src="assets/img/rctech-logo-white.png" alt="Robo City Technologies" class="logo-light">
+        <img src="assets/img/rctech-logo-purple.png" alt="Robo City Technologies" class="logo-dark">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -52,33 +65,20 @@
           <li><a href="index.html#hero">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#purple-hub">Purple Hub</a></li>
           <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="index.html#team">Team</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode" title="Light / dark mode">
+        <i class="bi bi-moon-stars"></i><i class="bi bi-sun"></i>
+      </button>
+
+      <a class="btn-getstarted" href="index.html#contact">Get in Touch</a>
 
     </div>
   </header>
@@ -91,17 +91,9 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1> MISSION</h1>
-              <p class="mb-0">"To be the global leader in robotics, software innovation, and smart home integration, revolutionizing the way people live, work, and connect with technology."</p>
+              <h1>Our Work</h1>
+              <p class="mb-0">Products we design and build in Lusaka, from apps and platforms to robots. Choose a project to see what it does.</p>
             </div>
-
-            <div>
-            <h2>OUR VISION</h2>
-            <p class="mb-0">
-            
-"At Robo City Technologies, we are committed to transforming the future through pioneering advancements in robotics, software development, and smart home solutions. <P>Our mission is to deliver innovative, high-quality products and services that enhance everyday life, empower businesses, and foster a more connected and intelligent world. We strive to exceed customer expectations, drive technological excellence, and build a legacy of trust and innovation."</P>
-            </p>
-          </div>
           </div>
         </div>
       </div>
@@ -109,7 +101,8 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current" id="crumb">Purple Hub</li>
           </ol>
         </div>
       </nav>
@@ -120,102 +113,206 @@
 
       <div class="container" data-aos="fade-up">
 
-        <div class="portfolio-details-slider swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/app-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/product-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/branding-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/books-1.jpg" alt="">
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+        <div class="project-tabs services-list mb-4">
+                <a href="#purple-hub" data-svc="purple-hub" class="active"><i class="bi bi-arrow-right-circle"></i><span>Purple Hub</span></a>
+                <a href="#purple-ai" data-svc="purple-ai"><i class="bi bi-arrow-right-circle"></i><span>Purple AI Companion</span></a>
+                <a href="#home-robot" data-svc="home-robot"><i class="bi bi-arrow-right-circle"></i><span>Autonomous Home Robot</span></a>
+                <a href="#purple-chat" data-svc="purple-chat"><i class="bi bi-arrow-right-circle"></i><span>Purple Chat</span></a>
+                <a href="#mercato" data-svc="mercato"><i class="bi bi-arrow-right-circle"></i><span>Mercato</span></a>
         </div>
 
-        <div class="row justify-content-between gy-4 mt-4">
-
-          <div class="col-lg-8" data-aos="fade-up">
-            <div class="portfolio-description">
-              <h2>OUR VISION</h2>
-              <p>
-              
-"At Robo City Technologies, we are committed to transforming the future through pioneering advancements in robotics, software development, and smart home solutions. <P>Our mission is to deliver innovative, high-quality products and services that enhance everyday life, empower businesses, and foster a more connected and intelligent world. We strive to exceed customer expectations, drive technological excellence, and build a legacy of trust and innovation."</P>
-              </p>
-             
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <div>
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
+        <div class="project-panel active" id="panel-purple-hub">
+            <video src="assets/video/purple-hub.mp4" poster="assets/video/purple-hub-poster.jpg" class="project-main" controls muted playsinline preload="metadata" aria-label="Purple Hub showcase video"></video>
+            <div class="row g-3 project-thumbs">
+              <div class="col-6 col-md-4"><a href="assets/img/masonry-portfolio/purple-hub.jpg" class="glightbox" data-gallery="g-purple-hub"><img src="assets/img/masonry-portfolio/purple-hub.jpg" alt="Purple Hub app" class="img-fluid"></a></div>
+              <div class="col-6 col-md-4"><a href="assets/img/projects/hub-pairing.jpg" class="glightbox" data-gallery="g-purple-hub"><img src="assets/img/projects/hub-pairing.jpg" alt="Devices found automatically" class="img-fluid"></a></div>
+              <div class="col-6 col-md-4"><a href="assets/img/services/smart-lights.jpg" class="glightbox" data-gallery="g-purple-hub"><img src="assets/img/services/smart-lights.jpg" alt="Smart lights in Purple Hub" class="img-fluid"></a></div>
+            </div>
+          <div class="row justify-content-between gy-4 mt-3">
+            <div class="col-lg-8">
+              <div class="portfolio-description">
+                <h2>Every device. One hub.</h2>
+              <p>Purple Hub is our platform for connected devices. Smart lights, robots, cameras, sensors and custom hardware are all managed from one app on your phone.</p>
+              <p>It runs entirely on your own network. Your devices and your data stay in your home, with no cloud account needed.</p>
+                <ul class="project-features">
+                <li><i class="bi bi-check-circle"></i> <span>Automatic discovery: devices on your network are found and paired for you</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Smart lighting: switch, dim and colour your lights in real time</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Robot control: live camera, 3D depth, LiDAR maps and tap-to-go navigation</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Built-in AI assistant: ask Purple to control your devices</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ready-to-flash firmware so ESP32 and Arduino projects join the hub</span></li>
+                </ul>
               </div>
-
-              <p>
-                Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
-              </p>
-
-              <p>
-                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
-              </p>
-
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Project</strong> Purple Hub</li>
+                  <li><strong>Category</strong> Platform and mobile app</li>
+                  <li><strong>Built by</strong> Robo City Technologies</li>
+                  <li><strong>Platform</strong> Android</li>
+                <li><strong>Status</strong> In active development</li>
+                  <li><a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Purple%20Hub" class="btn-visit align-self-start" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask About This Project</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong> Web design</li>
-                <li><strong>Client</strong> ASU Company</li>
-                <li><strong>Project date</strong> 01 March, 2020</li>
-                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
-              </ul>
+        </div>
+        <div class="project-panel" id="panel-purple-ai">
+            <img src="assets/img/masonry-portfolio/purple-ai.jpg" alt="Purple, the AI companion" class="img-fluid project-main">
+            <div class="row g-3 project-thumbs">
+              <div class="col-6 col-md-4"><a href="assets/img/projects/purple-ask.jpg" class="glightbox" data-gallery="g-purple-ai"><img src="assets/img/projects/purple-ask.jpg" alt="Ask Purple to control your devices" class="img-fluid"></a></div>
+            </div>
+          <div class="row justify-content-between gy-4 mt-3">
+            <div class="col-lg-8">
+              <div class="portfolio-description">
+                <h2>An AI companion that lives on your phone</h2>
+              <p>Purple is an AI companion with expressive animated eyes. It talks with you, shows how it feels and helps with everyday tasks.</p>
+              <p>The AI runs on the phone itself, so Purple keeps working offline and your conversations stay private.</p>
+                <ul class="project-features">
+                <li><i class="bi bi-check-circle"></i> <span>Runs offline: no cloud and no subscription</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Expressive animated face that reacts as you talk</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Voice conversation, and text when you prefer it</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Works with Purple Hub to control lights and devices</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Built in Zambia by the Robo City team</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Project</strong> Purple AI Companion</li>
+                  <li><strong>Category</strong> AI mobile app</li>
+                  <li><strong>Built by</strong> Robo City Technologies</li>
+                  <li><strong>Platform</strong> Android</li>
+                <li><strong>Status</strong> In active development</li>
+                  <li><a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Purple%20AI%20companion" class="btn-visit align-self-start" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask About This Project</a></li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="project-panel" id="panel-home-robot">
+            <img src="assets/img/services/robotics.jpg" alt="Robot camera, depth and LiDAR" class="img-fluid project-main">
+            <div class="row g-3 project-thumbs">
+              <div class="col-6 col-md-4"><a href="assets/img/robot-depth.jpg" class="glightbox" data-gallery="g-home-robot"><img src="assets/img/robot-depth.jpg" alt="3D depth view from the robot" class="img-fluid"></a></div>
+              <div class="col-6 col-md-4"><a href="assets/img/projects/robot-autonomy.jpg" class="glightbox" data-gallery="g-home-robot"><img src="assets/img/projects/robot-autonomy.jpg" alt="The robot goes round obstacles" class="img-fluid"></a></div>
+            </div>
+          <div class="row justify-content-between gy-4 mt-3">
+            <div class="col-lg-8">
+              <div class="portfolio-description">
+                <h2>A robot that sees, maps and finds its own way</h2>
+              <p>Our home robot is built on a hoverboard drive base with a Raspberry Pi, an Intel RealSense depth camera and a 360° LiDAR. You control it from Purple Hub.</p>
+              <p>It is designed to look after a home on its own. It can drive to a room, follow a person or repeat a patrol route. When something is in the way it reverses, turns and tries another path instead of giving up.</p>
+                <ul class="project-features">
+                <li><i class="bi bi-check-circle"></i> <span>Tap-to-go: tap a spot on the map and the robot drives there</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Person following and route record and repeat</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Obstacle recovery that keeps trying until it arrives</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Live camera, depth view and LiDAR mapping on your phone</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Switches the house lights on when it drives in the dark</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Project</strong> Autonomous Home Robot</li>
+                  <li><strong>Category</strong> Robotics</li>
+                  <li><strong>Built by</strong> Robo City Technologies</li>
+                  <li><strong>Platform</strong> Raspberry Pi, Intel RealSense D435, LiDAR</li>
+                <li><strong>Status</strong> Working prototype, in testing</li>
+                  <li><a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20home%20robot" class="btn-visit align-self-start" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask About This Project</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-panel" id="panel-purple-chat">
+            <img src="assets/img/masonry-portfolio/chatapp.png" alt="Purple Chat app" class="img-fluid project-main">
 
+          <div class="row justify-content-between gy-4 mt-3">
+            <div class="col-lg-8">
+              <div class="portfolio-description">
+                <h2>A chat app for Zambian students</h2>
+              <p>Purple Chat connects university students across Zambia. They can share study materials, talk about their courses and make friends at other universities.</p>
+                <ul class="project-features">
+                <li><i class="bi bi-check-circle"></i> <span>Chats between students across universities</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Sharing of notes and study materials</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Built for Zambian students</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Project</strong> Purple Chat</li>
+                  <li><strong>Category</strong> Social mobile app</li>
+                  <li><strong>Built by</strong> Robo City Technologies</li>
+                  <li><strong>Platform</strong> Mobile</li>
+                  <li><a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Purple%20Chat" class="btn-visit align-self-start" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask About This Project</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-panel" id="panel-mercato">
+            <img src="assets/img/masonry-portfolio/Mobile app.png" alt="Mercato marketplace app" class="img-fluid project-main">
+
+          <div class="row justify-content-between gy-4 mt-3">
+            <div class="col-lg-8">
+              <div class="portfolio-description">
+                <h2>A local marketplace in your pocket</h2>
+              <p>Mercato is a local marketplace app where people can buy and sell in their community. It was developed with diversity in mind, so it is easy for everyone to use.</p>
+                <ul class="project-features">
+                <li><i class="bi bi-check-circle"></i> <span>Buy and sell locally</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Simple sign-in and easy listings</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Designed to be easy for everyone to use</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Project</strong> Mercato</li>
+                  <li><strong>Category</strong> Marketplace app</li>
+                  <li><strong>Built by</strong> Robo City Technologies</li>
+                  <li><strong>Platform</strong> Mobile</li>
+                  <li><a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Mercato" class="btn-visit align-self-start" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask About This Project</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
 
     </section><!-- /Portfolio Details Section -->
+
+    <!-- Vision and Mission -->
+    <section id="vision" class="vision section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="vision-box">
+              <i class="bi bi-eye"></i>
+              <h3>Our Vision</h3>
+              <p>To be the global leader in robotics, software innovation and smart home integration, revolutionising the way people live, work and connect with technology.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="vision-box">
+              <i class="bi bi-rocket-takeoff"></i>
+              <h3>Our Mission</h3>
+              <p>To deliver innovative, high-quality products and services that enhance everyday life, empower businesses and foster a more connected and intelligent world. We strive to exceed customer expectations, drive technological excellence and build a legacy of trust and innovation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Vision and Mission -->
 
   </main>
 
@@ -225,53 +322,54 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Append</span>
+            <img src="assets/img/rctech-logo-purple.png" alt="Robo City Technologies" class="logo-dark" style="max-height: 70px;">
+            <img src="assets/img/rctech-logo-white.png" alt="Robo City Technologies" class="logo-light" style="max-height: 70px;">
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Robo City Technologies builds robotics, AI and smart home technology in Lusaka, Zambia, and trains the next generation of innovators.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/260974983555" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:robocitytech2024@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="tel:+260974983555" aria-label="Call"><i class="bi bi-telephone"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="index.html#services">Robotics</a></li>
+            <li><a href="index.html#services">Smart Home Integration</a></li>
+            <li><a href="index.html#services">Software Development</a></li>
+            <li><a href="index.html#services">Electronics Retail</a></li>
+            <li><a href="index.html#services">Training</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p>31/94B Garden House, </p>
+          <p>Off Mumbwa Road, Lusaka</p>
+          <p>Zambia</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+260 974 983 555</span></p>
+          <p><strong>Email:</strong> <span>robocitytech2024@gmail.com</span></p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>2026</span> <strong class="sitename">Robo City Technologies</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -291,7 +389,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -301,6 +398,28 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script>
+    // Show the project named in the address (portfolio-details.html#purple-hub), or the first one
+    (function () {
+      var links = document.querySelectorAll('.project-tabs a');
+      function show() {
+        var id = location.hash.slice(1);
+        if (!document.getElementById('panel-' + id)) id = links[0].dataset.svc;
+        document.querySelectorAll('.project-panel').forEach(function (p) {
+          var on = p.id === 'panel-' + id;
+          p.classList.toggle('active', on);
+          if (!on) p.querySelectorAll('video').forEach(function (v) { v.pause(); });
+        });
+        links.forEach(function (a) {
+          a.classList.toggle('active', a.dataset.svc === id);
+          if (a.dataset.svc === id) document.getElementById('crumb').textContent = a.textContent.trim();
+        });
+      }
+      window.addEventListener('hashchange', function () { show(); document.getElementById('portfolio-details').scrollIntoView(); });
+      show();
+    })();
+  </script>
 
 </body>
 

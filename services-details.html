@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services Details - Append Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Our Services | Robo City Technologies</title>
+
+
+  <meta content="Robotics, smart home integration, software development, electronics retail and hands-on training in Lusaka, Zambia." name="description">
+  <meta content="Robo City Technologies, RC Tech, Purple Hub, robotics Zambia, smart home Zambia, embedded systems training, Lusaka" name="keywords">
+  <meta property="og:title" content="Robo City Technologies">
+  <meta property="og:description" content="Innovate. Automate. Elevate. Robotics, AI and smart home technology from Lusaka, Zambia.">
+  <meta property="og:image" content="https://rctech.vercel.app/assets/img/rctech-logo-purple.png">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -34,6 +39,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script>
+    // Dark mode: remember the visitor's choice, otherwise follow their phone or computer setting
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('rct-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 
 <body class="services-details-page">
@@ -42,9 +56,8 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Append</h1><span>.</span>
+        <img src="assets/img/rctech-logo-white.png" alt="Robo City Technologies" class="logo-light">
+        <img src="assets/img/rctech-logo-purple.png" alt="Robo City Technologies" class="logo-dark">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -52,33 +65,20 @@
           <li><a href="index.html#hero">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#purple-hub">Purple Hub</a></li>
           <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="index.html#team">Team</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode" title="Light / dark mode">
+        <i class="bi bi-moon-stars"></i><i class="bi bi-sun"></i>
+      </button>
+
+      <a class="btn-getstarted" href="index.html#contact">Get in Touch</a>
 
     </div>
   </header>
@@ -91,9 +91,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Services Details</h1>
-              <p class="mb-0">At Robot City Techonologies, we are passionate about bridging the gap between innovation and everyday life. Founded with a vision to empower individuals and businesses through technology, we offer a comprehensive range of services including software development, smart home integration, electronics retail, and specialized training in web development and embedded systems. Our commitment extends beyond just selling products; we strive to educate and inspire, fostering a community of forward-thinkers and innovators. Whether you're looking to upgrade your home with the latest smart devices or enhance your skills through our training programs, Robo City Tech is here to guide you every step of the way.
-                Join us in shaping the future of technology in Zambia and beyond.</p>
+              <h1>Our Services</h1>
+              <p class="mb-0">Robotics, smart homes, software and hands-on training, from our team in Lusaka. Choose a service to see what we offer.</p>
             </div>
           </div>
         </div>
@@ -102,7 +101,8 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Services Details</li>
+            <li><a href="index.html#services">Services</a></li>
+            <li class="current" id="crumb">Robotics</li>
           </ol>
         </div>
       </nav>
@@ -118,51 +118,134 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 
             <div class="service-box">
-              <h4>Serices List</h4>
+              <h4>Our Services</h4>
               <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Robotics and AI systems</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web and Application Development</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Smart Home integration</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Supply of Smart Gadgets</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
+                <a href="#robotics" data-svc="robotics" class="active"><i class="bi bi-arrow-right-circle"></i><span>Robotics</span></a>
+                <a href="#smart-home" data-svc="smart-home"><i class="bi bi-arrow-right-circle"></i><span>Smart Home Integration</span></a>
+                <a href="#software" data-svc="software"><i class="bi bi-arrow-right-circle"></i><span>Software and Web Development</span></a>
+                <a href="#web-training" data-svc="web-training"><i class="bi bi-arrow-right-circle"></i><span>Web and Software Development Training</span></a>
+                <a href="#embedded-training" data-svc="embedded-training"><i class="bi bi-arrow-right-circle"></i><span>Embedded Systems Training</span></a>
+                <a href="#electronics" data-svc="electronics"><i class="bi bi-arrow-right-circle"></i><span>Electronics Retail</span></a>
               </div>
             </div><!-- End Services List -->
 
             <div class="service-box">
-              <h4>Download Catalog</h4>
+              <h4>Get a Quote</h4>
               <div class="download-catalog">
-                <a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
-                <a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+                <a href="https://wa.me/260974983555" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>Chat with us on WhatsApp</span></a>
+                <a href="mailto:robocitytech2024@gmail.com"><i class="bi bi-envelope"></i><span>Send us an email</span></a>
+                <a href="index.html#contact"><i class="bi bi-geo-alt"></i><span>Visit our office in Lusaka</span></a>
               </div>
-            </div><!-- End Services List -->
+            </div>
 
             <div class="help-box d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-headset help-icon"></i>
               <h4>Have a Question?</h4>
-              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+260 974983555</span></p>
-              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@example.com">robocitytech2024@gmail.com</a></p>
+              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <a href="tel:+260974983555">+260 974 983 555</a></p>
+              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:robocitytech2024@gmail.com">robocitytech2024@gmail.com</a></p>
+              <p class="mt-2 mb-0 small">Monday - Friday, 9:00 AM - 5:00 PM</p>
             </div>
 
           </div>
 
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
+
+          <div class="service-panel active" id="panel-robotics">
+            <img src="assets/img/services/robotics.jpg" alt="Robot camera, 3D depth and LiDAR map" class="img-fluid services-img">
+            <span class="service-tag"><i class="bi bi-robot"></i> Robotics</span>
+            <h3>Robots that see, map and navigate</h3>
+            <p>We design and build our own robots in Lusaka. Our current rover runs on a Raspberry Pi with an Intel RealSense depth camera, a 360° LiDAR and hoverboard motors, and it is controlled from Purple Hub on a phone.</p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Autonomous navigation: tap a spot on the map and the robot drives there by itself</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Person following, route recording and repeat, and home patrol</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Obstacle recovery: when the path is blocked it reverses, turns and finds another way</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Live camera, 3D depth view and LiDAR mapping from your phone</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Works with your smart home, for example switching lights on when it drives in the dark</span></li>
             </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
+            <p>We also build custom robots and prototypes for schools, research projects and businesses. Tell us what you want the robot to do and we will plan the build with you.</p>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20talk%20about%20a%20robotics%20project" class="btn-service" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a>
+          </div>
+
+          <div class="service-panel" id="panel-smart-home">
+            <img src="assets/img/services/smart-lights.jpg" alt="Smart lights controlled from Purple Hub" class="img-fluid services-img">
+            <span class="service-tag"><i class="bi bi-house-gear"></i> Smart Home Integration</span>
+            <h3>A smarter home, set up for you</h3>
+            <p>We plan, install and set up smart homes so that everything works together and is easy to use: lights, speakers, displays, cameras and plugs.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Smart lighting: colour bulbs you can switch, dim and schedule</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Google Nest and Amazon Alexa speakers and displays, set up for voice control</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Security cameras, smart plugs and automations</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Purple Hub: control your devices from one app, on your own network</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>A walkthrough for the whole household once everything is installed</span></li>
+            </ul>
+            <p>We can start with a single room or do the whole house, using devices you already own or ones we supply.</p>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20set%20up%20a%20smart%20home" class="btn-service" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a>
+          </div>
+
+          <div class="service-panel" id="panel-software">
+            <img src="assets/img/masonry-portfolio/purple-hub.jpg" alt="Purple Hub app" class="img-fluid services-img">
+            <span class="service-tag"><i class="bi bi-code-slash"></i> Software and Web Development</span>
+            <h3>Websites, apps and platforms</h3>
+            <p>We build software for businesses and organisations, from company websites to mobile apps and complete platforms.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Company websites and online shops</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Android and iOS mobile apps</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Custom business systems and dashboards</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>IoT and smart device apps that talk to real hardware</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Hosting, updates and support after launch</span></li>
+            </ul>
+            <p>Our own products include Purple Hub, our platform for connected devices; Purple, an AI companion that runs offline; Purple Chat; and Mercato, a local marketplace app.</p>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20software%20project" class="btn-service" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a>
+          </div>
+
+          <div class="service-panel" id="panel-web-training">
+            <img src="assets/img/services/learn-build.jpg" alt="Learn and build with Robo City Technologies" class="img-fluid services-img">
+            <span class="service-tag"><i class="bi bi-laptop"></i> Web and Software Development Training</span>
+            <h3>Learn to build for the web and mobile</h3>
+            <p>Practical training for beginners and people who want to go further. You learn by building real projects, not just watching slides.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Web foundations: HTML, CSS and JavaScript</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Building and publishing your own website</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Mobile app development</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Working with code tools, Git and GitHub</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Guidance on a final project for your portfolio</span></li>
+            </ul>
+            <p>Training is available for individuals, groups, schools and companies. Contact us for the next intake and the schedule.</p>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20join%20the%20web%20and%20software%20development%20training" class="btn-service" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a>
+          </div>
+
+          <div class="service-panel" id="panel-embedded-training">
+            <img src="assets/img/services/embedded-firmware.jpg" alt="ESP32 board connected to Purple Hub" class="img-fluid services-img">
+            <span class="service-tag"><i class="bi bi-cpu"></i> Embedded Systems Training</span>
+            <h3>Hands-on electronics, IoT and robotics</h3>
+            <p>Learn how real devices work by programming microcontrollers and connecting sensors, motors and displays. The programme is for children and adults.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Arduino programming: from blinking an LED to complete projects</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>ESP32 and Wi-Fi: build IoT devices you control from your phone</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Raspberry Pi: Linux, Python and cameras</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Sensors, motors and the basics of robotics</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Connect your projects to Purple Hub with ready-to-flash firmware</span></li>
+            </ul>
+            <p>Learners work on real hardware throughout. Contact us for the next intake, or to arrange training for a school or club.</p>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20join%20the%20embedded%20systems%20training" class="btn-service" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a>
+          </div>
+
+          <div class="service-panel" id="panel-electronics">
+            <img src="assets/img/masonry-portfolio/top phones.jpg" alt="Smartphones" class="img-fluid services-img">
+            <span class="service-tag"><i class="bi bi-phone"></i> Electronics Retail</span>
+            <h3>Quality electronics, with setup included</h3>
+            <p>We supply the latest smartphones, laptops and smart home devices, and we help you set them up.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Smartphones from leading brands</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Laptops and Chromebooks</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Smart speakers and displays: Amazon Echo Dot, Google Nest Mini and Nest Hub</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Smart bulbs, plugs and other gadgets</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Setup and help after you buy</span></li>
+            </ul>
+            <p>Send us a message on WhatsApp with what you are looking for and we will get back to you with what is available.</p>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%20would%20like%20to%20order%20a%20device" class="btn-service" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a>
+          </div>
+
           </div>
 
         </div>
@@ -179,42 +262,43 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Append</span>
+            <img src="assets/img/rctech-logo-purple.png" alt="Robo City Technologies" class="logo-dark" style="max-height: 70px;">
+            <img src="assets/img/rctech-logo-white.png" alt="Robo City Technologies" class="logo-light" style="max-height: 70px;">
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Robo City Technologies builds robotics, AI and smart home technology in Lusaka, Zambia, and trains the next generation of innovators.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/260974983555" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:robocitytech2024@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="tel:+260974983555" aria-label="Call"><i class="bi bi-telephone"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="index.html#services">Robotics</a></li>
+            <li><a href="index.html#services">Smart Home Integration</a></li>
+            <li><a href="index.html#services">Software Development</a></li>
+            <li><a href="index.html#services">Electronics Retail</a></li>
+            <li><a href="index.html#services">Training</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>31/94B Garden House</p>
+          <p>31/94B Garden House, </p>
           <p>Off Mumbwa Road, Lusaka</p>
           <p>Zambia</p>
           <p class="mt-4"><strong>Phone:</strong> <span>+260 974 983 555</span></p>
@@ -225,7 +309,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>2026</span> <strong class="sitename">Robo City Technologies</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -245,7 +329,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -255,6 +338,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script>
+    // Show the service named in the address (services-details.html#robotics), or the first one
+    (function () {
+      var links = document.querySelectorAll('.services-list a');
+      function show() {
+        var id = location.hash.slice(1);
+        if (!document.getElementById('panel-' + id)) id = links[0].dataset.svc;
+        document.querySelectorAll('.service-panel').forEach(function (p) { p.classList.toggle('active', p.id === 'panel-' + id); });
+        links.forEach(function (a) {
+          a.classList.toggle('active', a.dataset.svc === id);
+          if (a.dataset.svc === id) document.getElementById('crumb').textContent = a.textContent.trim();
+        });
+      }
+      window.addEventListener('hashchange', function () { show(); document.getElementById('service-details').scrollIntoView(); });
+      show();
+    })();
+  </script>
 
 </body>
 

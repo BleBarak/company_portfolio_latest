@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Append Bootstrap Template</title>
+  <title>Robo City Technologies | Robotics, AI and Smart Homes in Zambia</title>
 
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Robo City Technologies builds robotics, AI and smart home technology in Lusaka, Zambia: Purple Hub, software development, electronics and hands-on training in embedded systems." name="description">
+  <meta content="Robo City Technologies, RC Tech, Purple Hub, robotics Zambia, smart home Zambia, embedded systems training, Lusaka" name="keywords">
+  <meta property="og:title" content="Robo City Technologies">
+  <meta property="og:description" content="Innovate. Automate. Elevate. Robotics, AI and smart home technology from Lusaka, Zambia.">
+  <meta property="og:image" content="https://rctech.vercel.app/assets/img/rctech-logo-purple.png">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -36,6 +39,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script>
+    // Dark mode: remember the visitor's choice, otherwise follow their phone or computer setting
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('rct-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 
 <body class="index-page">
@@ -44,9 +56,8 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">RC Tech</h1><span>.</span>
+        <img src="assets/img/rctech-logo-white.png" alt="Robo City Technologies" class="logo-light">
+        <img src="assets/img/rctech-logo-purple.png" alt="Robo City Technologies" class="logo-dark">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -54,32 +65,20 @@
           <li><a href="index.html#hero" class="active">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#purple-hub">Purple Hub</a></li>
           <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#">Shipping and Fowarding</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="index.html#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode" title="Light / dark mode">
+        <i class="bi bi-moon-stars"></i><i class="bi bi-sun"></i>
+      </button>
+
+      <a class="btn-getstarted" href="index.html#contact">Get in Touch</a>
 
     </div>
   </header>
@@ -95,57 +94,20 @@
         <div class="row">
           <div class="col-lg-10">
             <h2 data-aos="fade-up" data-aos-delay="100">ROBO CITY TECHNOLOGIES</h2>
-            <p data-aos="fade-up" data-aos-delay="200"></p>
-            Innovate. Automate. Elevate.<br>
-            Revolutionizing Smart Living with Robotics and Innovation
+            <p data-aos="fade-up" data-aos-delay="200">Innovate. Automate. Elevate.<br>
+            Revolutionising smart living with robotics, AI and innovation.</p>
           </div>
-          <div class="col-lg-5">
-            <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-              <input type="text" class="form-control" placeholder="Enter email address for our News Letters">
-              <input type="submit" class="btn btn-primary" value="Sign up">
-            </form>
+          <div class="col-lg-8">
+            <div class="hero-actions d-flex flex-wrap" data-aos="fade-up" data-aos-delay="300">
+              <a href="#purple-hub" class="btn-hero">Discover Purple Hub</a>
+              <a href="https://wa.me/260974983555" class="btn-hero btn-hero-outline" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat With Us</a>
+            </div>
           </div>
         </div>
       </div>
 
     </section><!-- /Hero Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -155,23 +117,14 @@
 
           <div class="col-xl-5 content">
             <h3>About Us</h3>
-            <h2>What We Do<html lang="en">
-            <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Document</title>
-            </head>
-            <body>
-              
-            </body>
-            </html></h2>
+            <h2>What We Do</h2>
             <p>
-                At Robot City Techonologies, we are passionate about bridging the gap between innovation and everyday life. 
+                At Robo City Technologies, we are passionate about bridging the gap between innovation and everyday life. 
               Founded with a vision to empower individuals and businesses through technology, we offer a comprehensive range of services including software development, smart home integration, electronics retail, and specialized training in web development and embedded systems. Our commitment extends beyond just selling products; we strive to educate and inspire, fostering a community of forward-thinkers and innovators. 
-              Whether you're looking to upgrade your home with the latest smart devices or enhance your skills through our training programs, Robo City Tech is here to guide you every step of the way. </br>
+              Whether you're looking to upgrade your home with the latest smart devices or enhance your skills through our training programs, Robo City Tech is here to guide you every step of the way.<br>
               Join us in shaping the future of technology in Zambia and beyond.
             </p>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="#services" class="read-more"><span>Our Services</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
           <div class="col-xl-7">
@@ -181,7 +134,7 @@
                 <div class="icon-box">
                   <i class="bi bi-buildings"></i>
                   <h3>Robotics and AI Labs</h3>
-                  <p>Visit our state-of-the-art office for a personalized experience and to explore our latest technological innovations.</p>
+                  <p>Visit our office for a personalised experience and explore our latest robotics and AI innovations.</p>
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -189,7 +142,7 @@
                 <div class="icon-box">
                   <i class="bi bi-clipboard-pulse"></i>
                   <h3>Training Programs</h3>
-                  <p>Came and have the hands on training in Web and Mobile Application evelopment in the cutting edge Techonologies, we also offer Embeded System TRainings for both kids and adults.</p>
+                  <p>Hands-on training in web and mobile application development with modern technologies, plus embedded systems training for both children and adults.</p>
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -205,7 +158,7 @@
                 <div class="icon-box">
                   <i class="bi bi-graph-up-arrow"></i>
                   <h3>Our Impact</h3>
-                  <p>Discover the significant impact we've made through our innovative solutions and community-driven projects.</p>
+                  <p>Innovative solutions and community-driven projects that put technology to work in Zambia.</p>
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -217,48 +170,6 @@
 
     </section><!-- /About Section -->
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <img src="assets/img/nest mini.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -277,7 +188,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Web and Software Development Training</a></h4>
+                <h4 class="title"><a href="services-details.html#web-training" class="stretched-link">Web and Software Development Training</a></h4>
                 <p class="description">Comprehensive training programs to equip you with the skills needed to excel in web and software development.</p>
               </div>
             </div>
@@ -288,7 +199,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Software And Web Development</a></h4>
+                <h4 class="title"><a href="services-details.html#software" class="stretched-link">Software and Web Development</a></h4>
                 <p class="description">Custom software solutions tailored to your business requirements, enhancing efficiency and productivity.</p>
               </div>
             </div>
@@ -298,8 +209,8 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Smart Home intergration</a></h4>
-                <p class="description">Transform your living space with seamless smart home setups, including lighting, security, and automation</p>
+                <h4 class="title"><a href="services-details.html#smart-home" class="stretched-link">Smart Home Integration</a></h4>
+                <p class="description">Transform your living space with seamless smart home setups, including lighting, security and automation, all controlled from one app.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -308,7 +219,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Retail Of Electronics</a></h4>
+                <h4 class="title"><a href="services-details.html#electronics" class="stretched-link">Electronics Retail</a></h4>
                 <p class="description">Discover a wide selection of the latest smartphones, laptops, and smart speakers like Google Nest and Amazon Alexa.</p>
               </div>
             </div>
@@ -318,8 +229,8 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Robotics</a></h4>
-                <p class="description">Pioneering advancements in robotics within Zambia, driving innovation and technological growth.</p>
+                <h4 class="title"><a href="services-details.html#robotics" class="stretched-link">Robotics</a></h4>
+                <p class="description">Pioneering robotics in Zambia: autonomous robots, computer vision, LiDAR mapping and custom robot builds.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -328,8 +239,8 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Embeded System Training</a></h4>
-                <p class="description">Hands-on training in Arduino and Raspberry Pi programming to master embedded systems.</p>
+                <h4 class="title"><a href="services-details.html#embedded-training" class="stretched-link">Embedded Systems Training</a></h4>
+                <p class="description">Hands-on training in Arduino, ESP32 and Raspberry Pi programming to master embedded systems.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -340,17 +251,71 @@
 
     </section><!-- /Services Section -->
 
+    <!-- Purple Hub Section -->
+    <section id="purple-hub" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Purple Hub</h2>
+        <p>Our flagship platform: every device, one hub. Smart home, robotics and IoT, managed from a single app.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>All your devices, under one roof</h3>
+            <p>
+              Purple Hub brings smart lighting, robots, cameras, sensors and custom hardware together in one app.
+              It runs entirely on your own network, so your devices and your data stay with you.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Private by design: no cloud dependency, no accounts.</span></li>
+              <li><i class="bi bi-check"></i> <span>Effortless pairing: devices on your network are found automatically.</span></li>
+              <li><i class="bi bi-check"></i> <span>Smart home control: switch, dim and colour your lights in real time.</span></li>
+              <li><i class="bi bi-check"></i> <span>Built-in AI assistant: ask Purple to control your devices.</span></li>
+              <li><i class="bi bi-check"></i> <span>Ready-to-flash firmware for ESP32 and Arduino projects.</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-get-started">Get Purple Hub</a>
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <video src="assets/video/purple-hub.mp4" poster="assets/video/purple-hub-poster.jpg" class="img-fluid rounded-4 shadow" autoplay muted loop playsinline preload="metadata" aria-label="Purple Hub showcase"></video>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+          <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+            <div class="image-stack">
+              <img src="assets/img/robot-camera.jpg" alt="Robot camera view" class="stack-front">
+              <img src="assets/img/robot-depth.jpg" alt="Robot 3D depth view" class="stack-back">
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+            <h3>Robots that see, map and navigate</h3>
+            <p>
+              Purple Hub is built for robotics. See through your robot's camera with live 3D depth, map your rooms with LiDAR,
+              and let it drive itself: when the way is blocked, it recovers and reroutes on its own.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Live vision and 3D depth.</span></li>
+              <li><i class="bi bi-check"></i> <span>LiDAR mapping and tap-on-the-map navigation.</span></li>
+              <li><i class="bi bi-check"></i> <span>Touch or game-controller driving.</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-get-started align-self-start">Talk to Us</a>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Purple Hub Section -->
+
     <!-- Features Section -->
     <section id="features" class="features section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>New Arrivals</h2>
-        <p>Discover the Latest and Greatest
-
-          Stay ahead of the curve with our New Arrivals section! </br>
-          Explore the freshest products and innovations, from cutting-edge electronics to stylish home essentials. 
-          Whether you're looking for the latest gadgets, trendy fashion pieces, or must-have accessories, you'll find the best and brightest new arrivals right here. Don't miss out on the newest trends and technologies—start shopping now and elevate your lifestyle!</p>
+        <p>The latest smart home devices, in stock and ready to set up in your home.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -359,23 +324,23 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Amazon Echo Dot Speakers</h3>
             <p>
-                           Experience the next level of smart home technology with Amazon Echo Dot (4th and 5th Generation). 
+              Experience the next level of smart home technology with Amazon Echo Dot (4th and 5th Generation). 
               The Echo Dot 4th Gen features a sleek, spherical design and delivers crisp vocals and balanced bass, perfect for streaming music, controlling smart home devices, and getting the latest news updates. The Echo Dot 5th Gen builds on this with even better audio quality and enhanced Alexa capabilities, including health tracking and an integrated temperature sensor. Both models seamlessly blend into any decor while providing powerful features like hands-free calling, voice-controlled entertainment, and multi-room music. 
               Elevate your home with the smart, stylish, and superior sound of Amazon Echo Dot.
             </p>
-            <a href="#" class="btn btn-get-started">More Info</a>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%27d%20like%20to%20order%20an%20Amazon%20Echo%20Dot" class="btn btn-get-started" target="_blank" rel="noopener">Order on WhatsApp</a>
           </div>
           <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
             <div class="image-stack">
-              <img src="assets/img/dot5.jpg" alt="" class="stack-front">
-              <img src="assets/img/dot4.jpg" alt="" class="stack-back">
+              <img src="assets/img/dot5.jpg" alt="Amazon Echo Dot 5th Gen" class="stack-front">
+              <img src="assets/img/dot4.jpg" alt="Amazon Echo Dot 4th Gen" class="stack-back">
             </div>
           </div>
         </div><!-- Features Item -->
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/fgQ6sGWcbbymZWszHyptZM-1200-80.jpg" class="img-fluid" alt="">
+            <img src="assets/img/fgQ6sGWcbbymZWszHyptZM-1200-80.jpg" class="img-fluid" alt="Google Nest Mini and Nest Hub">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Google Nest Displays and Speakers</h3>
@@ -383,10 +348,10 @@
               Upgrade your home with the Google Nest Mini and Hub, the ultimate smart home devices designed to simplify your life. The Nest Mini, with its compact design and powerful speaker, offers rich sound for your favorite music and answers to your questions with the help of Google Assistant. The Nest Hub takes it a step further, providing a beautiful touchscreen display for easy control of your smart devices, viewing photos, and streaming videos. Both devices seamlessly integrate with your smart home ecosystem, making everyday tasks easier and more enjoyable. Embrace the future of home automation with Google Nest Mini and Hub.</p>
             <ul>
               <li><i class="bi bi-check"></i> <span>Voice Control.</span></li>
-              <li><i class="bi bi-check"></i><span> Easy Intergration with existing Devices.</span></li>
-              <li><i class="bi bi-check"></i> <span>Loud and Clear Sound</span>.</li>
+              <li><i class="bi bi-check"></i><span> Easy integration with existing devices.</span></li>
+              <li><i class="bi bi-check"></i> <span>Loud and clear sound.</span></li>
             </ul>
-            <a href="#" class="btn btn-get-started align-self-start">More Info</a>
+            <a href="https://wa.me/260974983555?text=Hi%2C%20I%27d%20like%20to%20order%20a%20Google%20Nest%20device" class="btn btn-get-started align-self-start" target="_blank" rel="noopener">Order on WhatsApp</a>
           </div>
         </div><!-- Features Item -->
 
@@ -400,7 +365,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Products and Services</h2>
-        <p>Explore our diverse range of projects showcasing innovation, expertise, and our commitment to excellence in technology and services</p>
+        <p>Our own products and the technology we supply, showcasing innovation, expertise and our commitment to excellence.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -411,99 +376,120 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">Electronics</li>
             <li data-filter=".filter-product">Smart Home</li>
-            <li data-filter=".filter-branding">Apps and Webs</li>
+            <li data-filter=".filter-branding">Apps and Platforms</li>
+            <li data-filter=".filter-robotics">Robotics</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/top phones.jpg" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/top phones.jpg" class="img-fluid" alt="Smartphones">
               <div class="portfolio-info">
                 <h4>Smart Phones</h4>
-                <p>We supply different models of Smart phones.</p>
+                <p>We supply a wide range of smartphone models.</p>
                 <a href="assets/img/masonry-portfolio/top phones.jpg" title="Smart Phones" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="services-details.html#electronics" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/google-nest-ecosystem.jpg" class="img-fluid" alt="">
+              <img src="assets/img/google-nest-ecosystem.jpg" class="img-fluid" alt="Google smart home devices">
               <div class="portfolio-info">
                 <h4>Google ecosystem</h4>
-                <p>Google Nest Mini, Google Nest Hub and other devises in this Ecosystem</p>
-                <a href="assets/img/google-nest-ecosystem.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <p>Google Nest Mini, Google Nest Hub and other devices in the Google ecosystem.</p>
+                <a href="assets/img/google-nest-ecosystem.jpg" title="Google ecosystem" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="services-details.html#smart-home" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/Mobile app.png" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/Mobile app.png" class="img-fluid" alt="Mercato marketplace app">
               <div class="portfolio-info">
                 <h4>Mercato</h4>
-                <p>Mercato is the local marketing Application developed with diversity in Mind.</p>
-                <a href="assets/img/masonry-portfolio/Mobile app.png" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <p>A local marketplace application, developed with diversity in mind.</p>
+                <a href="assets/img/masonry-portfolio/Mobile app.png" title="Mercato" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html#mercato" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/laptops.jpg" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/laptops.jpg" class="img-fluid" alt="Laptops">
               <div class="portfolio-info">
-                <h4>laptops</h4>
-                <p>Toshiba, Accer, MacBooks, Chromebokks and many more</p>
-                <a href="assets/img/masonry-portfolio/laptops.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Laptops</h4>
+                <p>Toshiba, Acer, MacBook, Chromebook and many more.</p>
+                <a href="assets/img/masonry-portfolio/laptops.jpg" title="Laptops" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="services-details.html#electronics" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/AlexaEo.jpg" class="img-fluid" alt="">
+              <img src="assets/img/AlexaEo.jpg" class="img-fluid" alt="Amazon smart home devices">
               <div class="portfolio-info">
                 <h4>Amazon ecosystem</h4>
-                <p>Amazon Echo Dot 3,4 and 5th Genearation, Amazon Echo Show, and many other Alexa Enabled Devices.</p>
-                <a href="assets/img/AlexaEo.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <p>Amazon Echo Dot (3rd, 4th and 5th generation), Echo Show and many other Alexa-enabled devices.</p>
+                <a href="assets/img/AlexaEo.jpg" title="Amazon ecosystem" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="services-details.html#smart-home" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Leasenet</h4>
-                <p>Have all your properties at the psalms of your Hands, manage your Houses, Plots, Farms and many other businesses.
-                </p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/gadgets.jpg" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/gadgets.jpg" class="img-fluid" alt="Gadgets">
               <div class="portfolio-info">
                 <h4>Other Gadgets</h4>
-                <p>Apple Siri Speakers, Smart Watches, Samsung Smarthings Ecosystems, Bluetooth speakers and many more.</p>
-                <a href="assets/img/masonry-portfolio/gadgets.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <p>Apple HomePod speakers, smartwatches, Samsung SmartThings devices, Bluetooth speakers and many more.</p>
+                <a href="assets/img/masonry-portfolio/gadgets.jpg" title="Other gadgets" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="services-details.html#electronics" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/Others.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Others.jpg" class="img-fluid" alt="Other smart home ecosystems">
               <div class="portfolio-info">
-                <h4>Other Ecosystem</h4>
-                <p>Smarthings Home Automation, Apple, Meross and many more.</p>
-                <a href="assets/img/Others.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Other Ecosystems</h4>
+                <p>SmartThings home automation, Apple, Meross and many more.</p>
+                <a href="assets/img/Others.jpg" title="Other ecosystems" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="services-details.html#smart-home" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/chatapp.png" class="img-fluid" alt="">
+              <img src="assets/img/masonry-portfolio/chatapp.png" class="img-fluid" alt="Purple Chat app">
               <div class="portfolio-info">
                 <h4>Purple Chat</h4>
-                <p>The numble one Zambian Student Social Media chat Application where you can share study Materila and make new friends from Different Universities across the country.</p>
-                <a href="assets/img/masonry-portfolio/chatapp.png" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <p>A social chat app for Zambian students to share study materials and make friends at universities across the country.</p>
+                <a href="assets/img/masonry-portfolio/chatapp.png" title="Purple Chat" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html#purple-chat" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/purple-hub.jpg" class="img-fluid" alt="Purple Hub app">
+              <div class="portfolio-info">
+                <h4>Purple Hub</h4>
+                <p>One app for every connected device: smart lighting, robots, cameras and sensors, managed privately on your own network.</p>
+                <a href="assets/img/masonry-portfolio/purple-hub.jpg" title="Purple Hub" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html#purple-hub" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/purple-ai.jpg" class="img-fluid" alt="Purple, the AI companion">
+              <div class="portfolio-info">
+                <h4>Purple AI Companion</h4>
+                <p>An AI companion that lives on your phone: it talks, shows how it feels and helps every day, with no cloud.</p>
+                <a href="assets/img/masonry-portfolio/purple-ai.jpg" title="Purple" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html#purple-ai" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-robotics">
+              <img src="assets/img/services/robotics.jpg" class="img-fluid" alt="Autonomous home robot: camera, depth and LiDAR">
+              <div class="portfolio-info">
+                <h4>Autonomous Home Robot</h4>
+                <p>Our robot sees in 3D, maps rooms with LiDAR and finds its own way round obstacles, all controlled from Purple Hub.</p>
+                <a href="assets/img/services/robotics.jpg" title="Autonomous Home Robot" data-gallery="portfolio-gallery-robotics" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html#home-robot" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -516,6 +502,101 @@
     </section><!-- /Portfolio Section -->
 
 
+    <!-- From the Lab (blog) Section -->
+    <section id="from-the-lab" class="recent-posts section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>From Our Lab</h2>
+        <p>Stories of what we are building, from hoverboard robots to Purple Hub.</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+              <div class="post-img">
+                <a href="blog-hoverboard-robot.html"><img src="assets/img/blog/posts/hoverboard.jpg" alt="How we turned an old hoverboard into a robot base" class="img-fluid"></a>
+              </div>
+              <p class="post-category">Robotics</p>
+              <h2 class="title">
+                <a href="blog-hoverboard-robot.html">How we turned an old hoverboard into a robot base</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <img src="assets/img/apple-touch-icon.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Robo City Tech Team</p>
+                  <p class="post-date"><time datetime="2026-11-08">8 Nov 2026</time></p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+              <div class="post-img">
+                <a href="blog-robot-never-gives-up.html"><img src="assets/img/projects/robot-autonomy.jpg" alt="Teaching our robot not to give up" class="img-fluid"></a>
+              </div>
+              <p class="post-category">Robotics</p>
+              <h2 class="title">
+                <a href="blog-robot-never-gives-up.html">Teaching our robot not to give up</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <img src="assets/img/apple-touch-icon.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Robo City Tech Team</p>
+                  <p class="post-date"><time datetime="2026-11-08">8 Nov 2026</time></p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+              <div class="post-img">
+                <a href="blog-purple-hub.html"><img src="assets/video/purple-hub-poster.jpg" alt="Purple Hub: every device, one hub" class="img-fluid"></a>
+              </div>
+              <p class="post-category">Products</p>
+              <h2 class="title">
+                <a href="blog-purple-hub.html">Purple Hub: every device, one hub</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <img src="assets/img/apple-touch-icon.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Robo City Tech Team</p>
+                  <p class="post-date"><time datetime="2026-11-08">8 Nov 2026</time></p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <article>
+              <div class="post-img">
+                <a href="blog-purple-ai.html"><img src="assets/img/masonry-portfolio/purple-ai.jpg" alt="Meet Purple, an AI companion that runs offline" class="img-fluid"></a>
+              </div>
+              <p class="post-category">Products</p>
+              <h2 class="title">
+                <a href="blog-purple-ai.html">Meet Purple, an AI companion that runs offline</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <img src="assets/img/apple-touch-icon.png" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Robo City Tech Team</p>
+                  <p class="post-date"><time datetime="2026-11-08">8 Nov 2026</time></p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="blog.html" class="btn-service"><i class="bi bi-journal-text"></i> Read the Blog</a>
+        </div>
+      </div>
+
+    </section><!-- /From the Lab Section -->
+
     <!-- Faq Section -->
     <section id="faq" class="faq section">
 
@@ -527,14 +608,7 @@
             <div class="content px-xl-5">
               <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
               <p>
-                Have questions? We've got answers! Explore our FAQ section below to find out more about Mercato's services, products, and training programs. If you don't find what you're looking for, feel free to contact us directly—we're here to help you navigate the world of technology with confidence.
-
-
-
-
-
-
-              </p>
+                Have questions? We've got answers. Find out more about our services, products and training programmes below. If you don't find what you're looking for, contact us directly; we're here to help you navigate the world of technology with confidence.              </p>
             </div>
           </div>
 
@@ -576,7 +650,7 @@
               <div class="faq-item">
                 <h3><span class="num">5.</span> <span>What is included in the embedded systems training?</span></h3>
                 <div class="faq-content">
-                  <p>Our embedded systems training includes hands-on programming with Arduino and Raspberry Pi, covering everything from basic setup to advanced projects.</p>
+                  <p>Our embedded systems training includes hands-on programming with Arduino, ESP32 and Raspberry Pi, covering everything from basic setup to advanced projects.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -596,7 +670,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Team</h2>
-        <p>We are a team of young and highly montivated individauls with a desire to work for the befit of moving our country foward</p>
+        <p>A young and highly motivated team, driven to move our country forward through technology.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -605,54 +679,33 @@
 
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
             <div class="member-img">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
+              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="Blessing Mwewa">
             </div>
             <div class="member-info text-center">
               <h4>Blessing Mwewa</h4>
               <span>Chief Executive Officer</span>
-              <p>Specialised in Robotic, IOT and Embeded systems</p>
+              <p>Specialised in robotics, IoT and embedded systems.</p>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
             <div class="member-img">
-              <img src="assets/img/team/Rabbi.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
+              <img src="assets/img/team/Rabbi.jpg" class="img-fluid" alt="Rabbi Kindalo">
             </div>
             <div class="member-info text-center">
               <h4>Rabbi Kindalo</h4>
               <span>Front End Developer</span>
-              <p>Specialised in front end development for both Mobile Application and  Websites.
-                highly motivated and very dedicated.
-              </p>
+              <p>Specialised in front-end development for mobile applications and websites. Highly motivated and dedicated.</p>
             </div>
           </div><!-- End Team Member -->
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
             <div class="member-img">
-              <img src="assets/img/team/Chola.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
+              <img src="assets/img/team/Chola.jpg" class="img-fluid" alt="Chola Kuboko">
             </div>
             <div class="member-info text-center">
               <h4>Chola Kuboko</h4>
-              <span>Front End Developer</span>
-              <p>Specialised in Backed Development, Dedicated and skillful, also a team player.
-              </p>
+              <span>Back End Developer</span>
+              <p>Specialised in back-end development. Dedicated, skilful and a true team player.</p>
             </div>
           </div><!-- End Team Member -->
         
@@ -671,9 +724,9 @@
         <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-10">
             <div class="text-center">
-              <h3>Surport the Future of Robotics</h3>
-              <p>At Robo City Tech, we are pushing the boundaries of innovation with our cutting-edge Robotic Robotic Developments. By becoming a sponsor, you will.</p>
-              <a class="cta-btn" href="#">Offer Support</a>
+              <h3>Support the Future of Robotics</h3>
+              <p>At Robo City Tech, we are pushing the boundaries of innovation with cutting-edge robotics and AI. Partner with us, invest or sponsor our work, and help shape the future of technology in Zambia and beyond.</p>
+              <a class="cta-btn" href="#contact">Partner With Us</a>
             </div>
           </div>
         </div>
@@ -688,7 +741,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Feel free to reach up to us on any  of our products and serveice, and for any enquiries.</p>
+        <p>Feel free to reach out to us about any of our products and services, or for any enquiries.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -711,8 +764,8 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+260 956946557</p>
-                  <p>+260 974983555</p>
+                  <p>+260 956 946 557</p>
+                  <p>+260 974 983 555</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -730,8 +783,8 @@
                   <i class="bi bi-clock"></i>
                   <h3>Open Hours</h3>
                   <p>Monday - Friday</p>
-                  <p>9:00AM - 05:00PM</p>
-                  <p>You can keep in Mind that our online platforms runs 24/7</p>
+                  <p>9:00 AM - 5:00 PM</p>
+                  <p>Our online platforms run 24/7.</p>
                  
                 </div>
               </div><!-- End Info Item -->
@@ -741,18 +794,14 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="wa-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
                 </div>
 
@@ -761,11 +810,8 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <button type="submit"><i class="bi bi-whatsapp"></i> Send on WhatsApp</button>
+                  <p class="small mt-3 mb-0">Prefer email? Write to <a href="mailto:robocitytech2024@gmail.com">robocitytech2024@gmail.com</a></p>
                 </div>
 
               </div>
@@ -786,35 +832,37 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">RC Tech</span>
+            <img src="assets/img/rctech-logo-purple.png" alt="Robo City Technologies" class="logo-dark" style="max-height: 70px;">
+            <img src="assets/img/rctech-logo-white.png" alt="Robo City Technologies" class="logo-light" style="max-height: 70px;">
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Robo City Technologies builds robotics, AI and smart home technology in Lusaka, Zambia, and trains the next generation of innovators.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/260974983555" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:robocitytech2024@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="tel:+260974983555" aria-label="Call"><i class="bi bi-telephone"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-                      </ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#services">Robotics</a></li>
+            <li><a href="#services">Smart Home Integration</a></li>
+            <li><a href="#services">Software Development</a></li>
+            <li><a href="#services">Electronics Retail</a></li>
+            <li><a href="#services">Training</a></li>
           </ul>
         </div>
 
@@ -823,7 +871,7 @@
           <p>31/94B Garden House, </p>
           <p>Off Mumbwa Road, Lusaka</p>
           <p>Zambia</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+260 974983555</span></p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+260 974 983 555</span></p>
           <p><strong>Email:</strong> <span>robocitytech2024@gmail.com</span></p>
         </div>
 
@@ -831,7 +879,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>2026</span> <strong class="sitename">Robo City Technologies</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -851,7 +899,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -861,6 +908,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script>
+    document.getElementById('wa-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var text = 'Hi Robo City Technologies, my name is ' + f.name.value.trim() + '.\n' +
+        'Subject: ' + f.subject.value.trim() + '\n\n' + f.message.value.trim();
+      window.open('https://wa.me/260974983555?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    });
+  </script>
 
 </body>
 
